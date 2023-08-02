@@ -41,14 +41,17 @@ public class CurrentTime extends JPanel implements Runnable {
 		la_date.setHorizontalAlignment(JLabel.CENTER);
 		
 		la_time = new JLabel(time);
-		la_time.setFont(new Font("digital-7", Font.BOLD, 90));
+		la_time.setFont(new Font("digital-7", Font.BOLD, 80));
 		la_time.setHorizontalAlignment(JLabel.CENTER);
 		
 		add(la_date, BorderLayout.NORTH);
 		add(la_time, BorderLayout.CENTER);
 		
+		setBackground(Color.WHITE);
 		setPreferredSize(new Dimension(300,200));
 		//setSize(300, 200);
+		
+		
 		Thread t1 = new Thread(this);
 		t1.start();
 
